@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- Setup Configuration -->
+  <?define ProductName = " Test Product" ?>
+  <?define ProductManufacturer = "Prakrishta Technologies" ?>
+  <?define ProductVersion = "1.0.0.0" ?>  
+  <?define ProductUpgradeCode = "8BFDE870-7F4A-4BC3-8130-85D765F2C4A9" ?>
+  
+  <!-- Setup UI 
+  <?define BannerBmpPath = \psffp02\DFS_Builds\Installation\Common\Miscellaneous\Wix_PSF_Banner8.bmp" ?>
+  <?define DialogBmpPath = "\psffp02\DFS_Builds\Installation\Common\Miscellaneous\Wix_PSF_Dialog.bmp" ?>
+  <?define IconPath = \\psffp02\DFS_Builds\Financials Logos & Icons\New program icons\PSF.ico" ?>
+  <?define BootstrapIconPath = "\psffp02\DFS_Builds\Financials Logos & Icons\New logo images\LogoFile.png" ?> -->
+</Include>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Load 1 million records" Command="{Binding LoadCommand}" Height="45" Padding="5"/>
+        </StackPanel>
+
+        <syncfusion:SfDataGrid Grid.Row="1" AllowFiltering="True"
+                                       AllowGrouping="True"
+                                       ColumnSizer="Star"
+                                       AutoGenerateColumns="False"
+                                        UseDrawing="Default"
+                                       ItemsSource="{Binding EmployeeDetails}"
+                                       EnableDataVirtualization="True"
+                                       NavigationMode="Row">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn HeaderText="Employee ID" MappingName="EmployeeID" />
+                <syncfusion:GridTextColumn HeaderText="Employee Name" MappingName="Name" />
+                <syncfusion:GridTextColumn MappingName="Gender" />
+                <syncfusion:GridTextColumn MappingName="Title" />
+                <syncfusion:GridTextColumn MappingName="SickLeaveHours" TextAlignment="Right" />
+                <syncfusion:GridCurrencyColumn MappingName="Salary" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </Grid>
+</Window>
